@@ -1317,7 +1317,7 @@ using ");
             this.Write("\t\t}\r\n\r\n");
             
             #line 467 "C:\Work\SourceCode\SideProject\WPF\WebApiProxy\WebApiProxy.Tasks\Templates\CSharpProxyTemplate.tt"
- if(isPost){ 
+ if(isPost && method.BodyParameter == null){ 
             
             #line default
             #line hidden
@@ -1384,14 +1384,7 @@ using ");
             
             #line default
             #line hidden
-            this.Write("Async");
-            
-            #line 477 "C:\Work\SourceCode\SideProject\WPF\WebApiProxy\WebApiProxy.Tasks\Templates\CSharpProxyTemplate.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(method.BodyParameter != null ? "<" + method.BodyParameter.Type + ">" : ""));
-            
-            #line default
-            #line hidden
-            this.Write("(");
+            this.Write("Async(");
             
             #line 477 "C:\Work\SourceCode\SideProject\WPF\WebApiProxy\WebApiProxy.Tasks\Templates\CSharpProxyTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(url));

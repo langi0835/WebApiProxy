@@ -464,7 +464,7 @@ namespace <#= Configuration.Namespace#>.Clients
 			 <# } #>
 		}
 
-<# if(isPost){ #>
+<# if(isPost && method.BodyParameter == null){ #>
 		/// <summary>
 		/// <#= method.Description.ToSummary() #>
 		/// </summary>
@@ -474,7 +474,7 @@ namespace <#= Configuration.Namespace#>.Clients
 		/// <returns></returns>
 		protected virtual async Task<HttpResponseMessage> <#= method.Name #>PostAsyncMsg(MultipartFormDataContent content <#=string.IsNullOrEmpty(parameterList)?"":","#> <#=parameterList#>)
 		{
-			return await HttpClient.<#=method.Type.ToTitle()#>Async<#= method.BodyParameter != null ? "<" + method.BodyParameter.Type + ">" : "" #>(<#=url#> ,content);
+			return await HttpClient.<#=method.Type.ToTitle()#>Async(<#=url#> ,content);
 		}
 
 		/// <summary>
