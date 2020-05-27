@@ -33,10 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>WebApiProxy.Tasks.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Build" />
@@ -114,7 +115,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="WebApiProxy.Tasks.snk" />
     <None Include="WebApiProxyCSharp.psm1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

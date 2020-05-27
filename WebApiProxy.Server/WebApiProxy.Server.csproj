@@ -33,10 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>WebApiProxy.Server.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DocsByReflection, Version=1.0.8.0, Culture=neutral, PublicKeyToken=64d1e8338525e7be, processorArchitecture=MSIL">
@@ -88,7 +89,6 @@
     <None Include="WebApiProxy.Server.nuspec">
       <SubType>Designer</SubType>
     </None>
-    <None Include="WebApiProxy.Server.snk" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
